@@ -1,0 +1,15 @@
+C:\Users\Roy\Desktop\InterViewDemo\Northwind\Northwind.Domain\bin\Debug\Northwind.mdf
+C:\Users\Roy\Desktop\InterViewDemo\Northwind\Northwind.Domain\bin\Debug\Northwind_log.ldf
+C:\Users\Roy\Desktop\InterViewDemo\Northwind\Northwind.Domain\bin\Debug\Northwind.Domain.dll.config
+C:\Users\Roy\Desktop\InterViewDemo\Northwind\Northwind.Domain\bin\Debug\Northwind.Domain.dll
+C:\Users\Roy\Desktop\InterViewDemo\Northwind\Northwind.Domain\bin\Debug\Northwind.Domain.pdb
+C:\Users\Roy\Desktop\InterViewDemo\Northwind\Northwind.Domain\bin\Debug\EntityFramework.dll
+C:\Users\Roy\Desktop\InterViewDemo\Northwind\Northwind.Domain\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Roy\Desktop\InterViewDemo\Northwind\Northwind.Domain\bin\Debug\EntityFramework.xml
+C:\Users\Roy\Desktop\InterViewDemo\Northwind\Northwind.Domain\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Roy\Desktop\InterViewDemo\Northwind\Northwind.Domain\bin\Debug\zh-Hant\EntityFramework.resources.dll
+C:\Users\Roy\Desktop\InterViewDemo\Northwind\Northwind.Domain\obj\Debug\Northwind.Domain.csprojAssemblyReference.cache
+C:\Users\Roy\Desktop\InterViewDemo\Northwind\Northwind.Domain\obj\Debug\Northwind.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Roy\Desktop\InterViewDemo\Northwind\Northwind.Domain\obj\Debug\Northwind.Domain.csproj.CopyComplete
+C:\Users\Roy\Desktop\InterViewDemo\Northwind\Northwind.Domain\obj\Debug\Northwind.Domain.dll
+C:\Users\Roy\Desktop\InterViewDemo\Northwind\Northwind.Domain\obj\Debug\Northwind.Domain.pdb
