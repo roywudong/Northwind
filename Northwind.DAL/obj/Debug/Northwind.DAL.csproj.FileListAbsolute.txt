@@ -16,3 +16,4 @@ C:\Users\Roy\Desktop\InterViewDemo\Northwind\Northwind.DAL\obj\Debug\Northwind.D
 C:\Users\Roy\Desktop\InterViewDemo\Northwind\Northwind.DAL\obj\Debug\Northwind.DAL.csproj.CopyComplete
 C:\Users\Roy\Desktop\InterViewDemo\Northwind\Northwind.DAL\obj\Debug\Northwind.DAL.dll
 C:\Users\Roy\Desktop\InterViewDemo\Northwind\Northwind.DAL\obj\Debug\Northwind.DAL.pdb
+C:\Users\Roy\Desktop\InterViewDemo\Northwind\Northwind.DAL\bin\Debug\zh-Hant\EntityFramework.SqlServer.resources.dll

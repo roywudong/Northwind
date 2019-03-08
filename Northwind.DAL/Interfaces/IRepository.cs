@@ -5,7 +5,7 @@ using System.Linq.Expressions;
 
 namespace Northwind.DAL.Interfaces
 {
-  internal interface IRepository<TEntity> where TEntity : class
+  public interface IRepository<TEntity> where TEntity : class
   {
     IEnumerable<TEntity> Get(Expression<Func<TEntity, bool>> filter = null,
             Func<IQueryable<TEntity>,

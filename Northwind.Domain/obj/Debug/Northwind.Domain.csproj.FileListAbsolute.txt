@@ -13,3 +13,4 @@ C:\Users\Roy\Desktop\InterViewDemo\Northwind\Northwind.Domain\obj\Debug\Northwin
 C:\Users\Roy\Desktop\InterViewDemo\Northwind\Northwind.Domain\obj\Debug\Northwind.Domain.csproj.CopyComplete
 C:\Users\Roy\Desktop\InterViewDemo\Northwind\Northwind.Domain\obj\Debug\Northwind.Domain.dll
 C:\Users\Roy\Desktop\InterViewDemo\Northwind\Northwind.Domain\obj\Debug\Northwind.Domain.pdb
+C:\Users\Roy\Desktop\InterViewDemo\Northwind\Northwind.Domain\bin\Debug\zh-Hant\EntityFramework.SqlServer.resources.dll

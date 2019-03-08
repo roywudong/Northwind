@@ -1,0 +1,98 @@
+﻿@using Northwind.Web.HtmlHelpers
+@model Northwind.Web.Models.CustomerListViewModel
+
+@{
+  ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+  @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+  @{ var title = Model.Customers.FirstOrDefault();}
+  <tr>
+    <th>
+      @Html.DisplayNameFor(model => title.CustomerID)
+    </th>
+    <th>
+      @Html.DisplayNameFor(model => title.CompanyName)
+    </th>
+    <th>
+      @Html.DisplayNameFor(model => title.ContactName)
+    </th>
+    <th>
+      @Html.DisplayNameFor(model => title.ContactTitle)
+    </th>
+    <th>
+      @Html.DisplayNameFor(model => title.Address)
+    </th>
+    <th>
+      @Html.DisplayNameFor(model => title.City)
+    </th>
+    <th>
+      @Html.DisplayNameFor(model => title.Region)
+    </th>
+    <th>
+      @Html.DisplayNameFor(model => title.PostalCode)
+    </th>
+    <th>
+      @Html.DisplayNameFor(model => title.Country)
+    </th>
+    <th>
+      @Html.DisplayNameFor(model => title.Phone)
+    </th>
+    <th>
+      @Html.DisplayNameFor(model => title.Fax)
+    </th>
+    <th></th>
+  </tr>
+
+  @foreach (var item in Model.Customers)
+  {
+    <tr>
+      <td>
+        @Html.DisplayFor(modelItem => item.CustomerID)
+      </td>
+      <td>
+        @Html.DisplayFor(modelItem => item.CompanyName)
+      </td>
+      <td>
+        @Html.DisplayFor(modelItem => item.ContactName)
+      </td>
+      <td>
+        @Html.DisplayFor(modelItem => item.ContactTitle)
+      </td>
+      <td>
+        @Html.DisplayFor(modelItem => item.Address)
+      </td>
+      <td>
+        @Html.DisplayFor(modelItem => item.City)
+      </td>
+      <td>
+        @Html.DisplayFor(modelItem => item.Region)
+      </td>
+      <td>
+        @Html.DisplayFor(modelItem => item.PostalCode)
+      </td>
+      <td>
+        @Html.DisplayFor(modelItem => item.Country)
+      </td>
+      <td>
+        @Html.DisplayFor(modelItem => item.Phone)
+      </td>
+      <td>
+        @Html.DisplayFor(modelItem => item.Fax)
+      </td>
+      <td>
+        @Html.ActionLink("Edit", "Edit", new { CustomerID = item.CustomerID }) |
+        @Html.ActionLink("Details", "Details", new { CustomerID = item.CustomerID }) |
+        @Html.ActionLink("Delete", "Delete", new { CustomerID = item.CustomerID })
+      </td>
+    </tr>
+  }
+</table>
+<div class="text-center">
+  @Html.Pager(Model.PagingInfo)
+</div>

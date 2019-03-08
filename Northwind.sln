@@ -11,6 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Northwind.BLL", "Northwind.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Northwind.Web", "Northwind.Web\Northwind.Web.csproj", "{B98991BB-35CE-4D26-8EC6-B6FF71A9F1FA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test.BLL", "Test.BLL\Test.BLL.csproj", "{4C21B94E-7D8A-456B-801C-508A4BCCF326}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{09806356-2921-4CB0-825F-9A9AD0086283}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,9 +37,16 @@ Global
 		{B98991BB-35CE-4D26-8EC6-B6FF71A9F1FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B98991BB-35CE-4D26-8EC6-B6FF71A9F1FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B98991BB-35CE-4D26-8EC6-B6FF71A9F1FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4C21B94E-7D8A-456B-801C-508A4BCCF326}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C21B94E-7D8A-456B-801C-508A4BCCF326}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C21B94E-7D8A-456B-801C-508A4BCCF326}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C21B94E-7D8A-456B-801C-508A4BCCF326}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{4C21B94E-7D8A-456B-801C-508A4BCCF326} = {09806356-2921-4CB0-825F-9A9AD0086283}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8B0FCFDF-9473-4F20-B9E5-DD970FA82A23}
