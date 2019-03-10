@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Northwind.BLL.Abstract
 {
-  public interface IBaseService<Model, ViewModel>
+  public interface IBaseService<Model, ViewModel, Keytype>
     where Model : class
     where ViewModel : class
   {
@@ -16,6 +16,6 @@ namespace Northwind.BLL.Abstract
 
     void Save(ViewModel models);
 
-    void Delete(string EntityID);
+    void Delete(Keytype EntityID);
   }
 }

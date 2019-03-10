@@ -9,6 +9,7 @@ namespace Northwind.Domain.ViewModel
     public string CustomerID { get; set; }
 
     [Display(Name = "公司名稱")]
+    [Required(ErrorMessage = "請輸入客戶公司名稱")]
     public string CompanyName { get; set; }
 
     [Display(Name = "聯絡人姓名")]

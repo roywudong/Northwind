@@ -24,7 +24,9 @@
           @Html.ActionLink("Northwind Demo", "Index", "Customer", new { area = "" }, new { @class = "navbar-brand" })
         </div>
         <div class="navbar-collapse collapse">
-          <ul class="nav navbar-right">
+          <ul class="nav navbar-nav">
+            <li>@Html.ActionLink("客戶管理", "Index", "Customer", null, null)</li>
+            <li>@Html.ActionLink("供應商管理", "Index", "Supplier", null, null)</li>
             <li>
               @Html.ActionLink("登出", "Logout", "Account", null, null)
             </li>

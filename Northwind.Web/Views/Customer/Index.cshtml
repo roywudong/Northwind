@@ -1,5 +1,6 @@
-﻿@using Northwind.Web.HtmlHelpers
-@model Northwind.Web.Models.CustomerListViewModel
+﻿@using Northwind.Web.HtmlHelpers;
+@using Northwind.Domain.ViewModel;
+@model Northwind.Web.Models.ListViewModel<CustomerViewModel>
 
 @{
   ViewBag.Title = "Index";
@@ -11,7 +12,7 @@
   @Html.ActionLink("新增", "Create")
 </p>
 <table class="table">
-  @{ var title = Model.Customers.FirstOrDefault();}
+  @{ var title = Model.viewModel.FirstOrDefault();}
   <tr>
     <th>
       @Html.DisplayNameFor(model => title.CustomerID)
@@ -49,7 +50,7 @@
     <th></th>
   </tr>
 
-  @foreach (var item in Model.Customers)
+  @foreach (var item in Model.viewModel)
   {
     <tr>
       <td>

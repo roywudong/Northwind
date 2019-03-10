@@ -7,9 +7,9 @@ using System.Web;
 
 namespace Northwind.Web.Models
 {
-  public class CustomerListViewModel
+  public class ListViewModel<ViewModel>
   {
-    public List<CustomerViewModel> Customers { get; set; }
+    public List<ViewModel> viewModel { get; set; }
     public PagingInfo PagingInfo { get; set; }
   }
 }

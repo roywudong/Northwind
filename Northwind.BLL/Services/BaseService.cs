@@ -10,9 +10,11 @@ using Northwind.BLL.Abstract;
 
 namespace Northwind.BLL.Services
 {
-  public class BaseService<Model, ViewModel> where Model : class where ViewModel : class
+  public class BaseService<Model, ViewModel, Keytype>
+    where Model : class
+    where ViewModel : class
   {
-    private IRepository<Model> db;
+    protected IRepository<Model> db;
 
     public BaseService()
     {
@@ -37,7 +39,7 @@ namespace Northwind.BLL.Services
       db.Update(entity);
     }
 
-    public void Delete(string EntityID)
+    public void Delete(Keytype EntityID)
     {
       var entity = db.GetByID(EntityID);
       db.Delete(entity);

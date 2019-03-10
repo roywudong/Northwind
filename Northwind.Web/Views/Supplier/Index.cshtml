@@ -1,0 +1,105 @@
+﻿@using Northwind.Web.HtmlHelpers;
+@using Northwind.Domain.ViewModel;
+@model Northwind.Web.Models.ListViewModel<SupplierViewModel>
+
+@{
+  ViewBag.Title = "Index";
+}
+
+<h2>供應商管理</h2>
+
+<p>
+  @Html.ActionLink("新增", "Create")
+</p>
+<table class="table">
+  @{ var title = Model.viewModel.FirstOrDefault();}
+  <tr>
+    <th>
+      @Html.DisplayNameFor(model => title.SupplierID)
+    </th>
+    <th>
+      @Html.DisplayNameFor(model => title.CompanyName)
+    </th>
+    <th>
+      @Html.DisplayNameFor(model => title.ContactName)
+    </th>
+    <th>
+      @Html.DisplayNameFor(model => title.ContactTitle)
+    </th>
+    <th>
+      @Html.DisplayNameFor(model => title.Address)
+    </th>
+    <th>
+      @Html.DisplayNameFor(model => title.City)
+    </th>
+    <th>
+      @Html.DisplayNameFor(model => title.Region)
+    </th>
+    <th>
+      @Html.DisplayNameFor(model => title.PostalCode)
+    </th>
+    <th>
+      @Html.DisplayNameFor(model => title.Country)
+    </th>
+    <th>
+      @Html.DisplayNameFor(model => title.Phone)
+    </th>
+    <th>
+      @Html.DisplayNameFor(model => title.Fax)
+    </th>
+    <th>
+      @Html.DisplayNameFor(model => title.HomePage)
+    </th>
+    <th></th>
+  </tr>
+
+  @foreach (var item in Model.viewModel)
+  {
+    <tr>
+      <td>
+        @Html.DisplayFor(modelItem => item.SupplierID)
+      </td>
+      <td>
+        @Html.DisplayFor(modelItem => item.CompanyName)
+      </td>
+      <td>
+        @Html.DisplayFor(modelItem => item.ContactName)
+      </td>
+      <td>
+        @Html.DisplayFor(modelItem => item.ContactTitle)
+      </td>
+      <td>
+        @Html.DisplayFor(modelItem => item.Address)
+      </td>
+      <td>
+        @Html.DisplayFor(modelItem => item.City)
+      </td>
+      <td>
+        @Html.DisplayFor(modelItem => item.Region)
+      </td>
+      <td>
+        @Html.DisplayFor(modelItem => item.PostalCode)
+      </td>
+      <td>
+        @Html.DisplayFor(modelItem => item.Country)
+      </td>
+      <td>
+        @Html.DisplayFor(modelItem => item.Phone)
+      </td>
+      <td>
+        @Html.DisplayFor(modelItem => item.Fax)
+      </td>
+      <td>
+        @Html.DisplayFor(modelItem => item.HomePage)
+      </td>
+      <td>
+        @Html.ActionLink("修改", "Edit", new { SupplierID = item.SupplierID }) |
+        @Html.ActionLink("詳情", "Details", new { SupplierID = item.SupplierID }) |
+        @Html.ActionLink("刪除", "Delete", new { SupplierID = item.SupplierID })
+      </td>
+    </tr>
+  }
+</table>
+<div class="text-center">
+  @Html.Pager(Model.PagingInfo)
+</div>

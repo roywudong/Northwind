@@ -10,30 +10,17 @@ using Northwind.BLL.Abstract;
 
 namespace Northwind.BLL.Services
 {
-  public class CustomerService : BaseService<Customers, CustomerViewModel>
+  public class CustomerService : BaseService<Customers, CustomerViewModel, string>
     , ICustomerService
   {
-    private IRepository<Customers> db;
-
-    public CustomerService()
-    {
-      db = new GenericRepository<Customers>();
-    }
-
-    //public List<CustomerViewModel> Get()
-    //{
-    //  var listCostomer = db.Get().ToList();
-    //  return Mapper.Map<List<Customers>, List<CustomerViewModel>>(listCostomer);
-    //}
-
     public IQueryable<CustomerViewModel> Get(int CurrPage, int PageSize, out int iTotal)
     {
       iTotal = db.Get().Count();
-      var listCostomer = db.Get()
+      var costomers = db.Get()
         .OrderBy(c => c.CustomerID)
         .Skip((CurrPage - 1) * PageSize)
         .Take(PageSize).ToList();
-      return Mapper.Map<List<Customers>, List<CustomerViewModel>>(listCostomer).AsQueryable();
+      return Mapper.Map<List<Customers>, List<CustomerViewModel>>(costomers).AsQueryable();
     }
 
     public CustomerViewModel Get(string CustomerID)
@@ -41,23 +28,5 @@ namespace Northwind.BLL.Services
       var costomer = db.Get().Where(c => c.CustomerID == CustomerID).FirstOrDefault();
       return Mapper.Map<Customers, CustomerViewModel>(costomer);
     }
-
-    //public void AddCustomer(CustomerViewModel models)
-    //{
-    //  var cust = Mapper.Map<CustomerViewModel, Customers>(models);
-    //  db.Insert(cust);
-    //}
-
-    //public void SaveCustomer(CustomerViewModel models)
-    //{
-    //  var cust = Mapper.Map<CustomerViewModel, Customers>(models);
-    //  db.Update(cust);
-    //}
-
-    //public void Delete(string CustomerID)
-    //{
-    //  var Customer = db.GetByID(CustomerID);
-    //  db.Delete(Customer);
-    //}
   }
 }

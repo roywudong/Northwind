@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Northwind.BLL.Abstract
 {
-  public interface ICustomerService : IBaseService<Customers, CustomerViewModel>
+  public interface ICustomerService : IBaseService<Customers, CustomerViewModel, string>
   {
     IQueryable<CustomerViewModel> Get(int CurrPage, int PageSize, out int iTotal);
 
