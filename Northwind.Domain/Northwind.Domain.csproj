@@ -115,6 +115,7 @@
       <DependentUpon>NorthwindModel.tt</DependentUpon>
     </Compile>
     <Compile Include="ViewModel\CustomerViewModel.cs" />
+    <Compile Include="ViewModel\SupplierViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

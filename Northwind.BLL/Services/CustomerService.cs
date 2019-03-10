@@ -10,7 +10,8 @@ using Northwind.BLL.Abstract;
 
 namespace Northwind.BLL.Services
 {
-  public class CustomerService : ICustomerService
+  public class CustomerService : BaseService<Customers, CustomerViewModel>
+    , ICustomerService
   {
     private IRepository<Customers> db;
 
@@ -19,11 +20,11 @@ namespace Northwind.BLL.Services
       db = new GenericRepository<Customers>();
     }
 
-    public List<CustomerViewModel> Get()
-    {
-      var listCostomer = db.Get().ToList();
-      return Mapper.Map<List<Customers>, List<CustomerViewModel>>(listCostomer);
-    }
+    //public List<CustomerViewModel> Get()
+    //{
+    //  var listCostomer = db.Get().ToList();
+    //  return Mapper.Map<List<Customers>, List<CustomerViewModel>>(listCostomer);
+    //}
 
     public IQueryable<CustomerViewModel> Get(int CurrPage, int PageSize, out int iTotal)
     {
@@ -41,22 +42,22 @@ namespace Northwind.BLL.Services
       return Mapper.Map<Customers, CustomerViewModel>(costomer);
     }
 
-    public void AddCustomer(CustomerViewModel models)
-    {
-      var cust = Mapper.Map<CustomerViewModel, Customers>(models);
-      db.Insert(cust);
-    }
+    //public void AddCustomer(CustomerViewModel models)
+    //{
+    //  var cust = Mapper.Map<CustomerViewModel, Customers>(models);
+    //  db.Insert(cust);
+    //}
 
-    public void SaveCustomer(CustomerViewModel models)
-    {
-      var cust = Mapper.Map<CustomerViewModel, Customers>(models);
-      db.Update(cust);
-    }
+    //public void SaveCustomer(CustomerViewModel models)
+    //{
+    //  var cust = Mapper.Map<CustomerViewModel, Customers>(models);
+    //  db.Update(cust);
+    //}
 
-    public void Delete(string CustomerID)
-    {
-      var Customer = db.GetByID(CustomerID);
-      db.Delete(Customer);
-    }
+    //public void Delete(string CustomerID)
+    //{
+    //  var Customer = db.GetByID(CustomerID);
+    //  db.Delete(Customer);
+    //}
   }
 }

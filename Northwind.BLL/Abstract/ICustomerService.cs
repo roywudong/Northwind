@@ -1,4 +1,5 @@
-﻿using Northwind.Domain.ViewModel;
+﻿using Northwind.Domain;
+using Northwind.Domain.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,18 +8,10 @@ using System.Threading.Tasks;
 
 namespace Northwind.BLL.Abstract
 {
-  public interface ICustomerService
+  public interface ICustomerService : IBaseService<Customers, CustomerViewModel>
   {
-    List<CustomerViewModel> Get();
-
     IQueryable<CustomerViewModel> Get(int CurrPage, int PageSize, out int iTotal);
 
     CustomerViewModel Get(string CustomerID);
-
-    void AddCustomer(CustomerViewModel models);
-
-    void SaveCustomer(CustomerViewModel models);
-
-    void Delete(string CustomerID);
   }
 }

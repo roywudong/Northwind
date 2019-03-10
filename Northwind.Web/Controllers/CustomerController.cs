@@ -45,7 +45,7 @@ namespace Northwind.Web.Controllers
       {
         if (ModelState.IsValid)
         {
-          service.SaveCustomer(customer);
+          service.Save(customer);
           TempData.Add("Message", "The customer was successfully added");
           return RedirectToAction("Index");
         }
@@ -71,7 +71,7 @@ namespace Northwind.Web.Controllers
       {
         if (ModelState.IsValid)
         {
-          service.AddCustomer(customer);
+          service.Add(customer);
           TempData.Add("Message", "The customer was successfully added");
           return RedirectToAction("Index");
         }
