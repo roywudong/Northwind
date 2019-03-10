@@ -83,3 +83,12 @@ C:\Users\Roy\Desktop\InterViewDemo\Northwind\Northwind.Web\bin\System.Web.Http.W
 C:\Users\Roy\Desktop\InterViewDemo\Northwind\Northwind.Web\bin\AutoMapper.pdb
 C:\Users\Roy\Desktop\InterViewDemo\Northwind\Northwind.Web\bin\AutoMapper.xml
 C:\Users\Roy\Desktop\InterViewDemo\Northwind\Northwind.Web\bin\System.ValueTuple.xml
+C:\Users\Roy\Desktop\InterViewDemo\Northwind\Northwind.Web\bin\Ninject.dll
+C:\Users\Roy\Desktop\InterViewDemo\Northwind\Northwind.Web\bin\Ninject.Web.Common.dll
+C:\Users\Roy\Desktop\InterViewDemo\Northwind\Northwind.Web\bin\Ninject.Web.Common.WebHost.dll
+C:\Users\Roy\Desktop\InterViewDemo\Northwind\Northwind.Web\bin\Ninject.Web.Mvc.dll
+C:\Users\Roy\Desktop\InterViewDemo\Northwind\Northwind.Web\bin\WebActivatorEx.dll
+C:\Users\Roy\Desktop\InterViewDemo\Northwind\Northwind.Web\bin\Ninject.xml
+C:\Users\Roy\Desktop\InterViewDemo\Northwind\Northwind.Web\bin\Ninject.Web.Common.xml
+C:\Users\Roy\Desktop\InterViewDemo\Northwind\Northwind.Web\bin\Ninject.Web.Common.WebHost.xml
+C:\Users\Roy\Desktop\InterViewDemo\Northwind\Northwind.Web\bin\Ninject.Web.Mvc.xml

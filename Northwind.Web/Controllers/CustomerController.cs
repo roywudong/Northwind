@@ -9,6 +9,7 @@ using Northwind.Web.Models;
 
 namespace Northwind.Web.Controllers
 {
+  [Authorize]
   public class CustomerController : Controller
   {
     private CustomerService service = new CustomerService();
@@ -87,7 +88,6 @@ namespace Northwind.Web.Controllers
     {
       try
       {
-        // TODO: Add delete logic here
         service.Delete(CustomerID);
         TempData.Add("Message", $"{CustomerID} has been delete");
         return RedirectToAction("Index");
@@ -97,6 +97,12 @@ namespace Northwind.Web.Controllers
         TempData.Add("Message", $"There has been some problems");
         return View();
       }
+    }
+
+    public ActionResult Details(string CustomerID)
+    {
+      var data = service.Get(CustomerID);
+      return View(data);
     }
   }
 }

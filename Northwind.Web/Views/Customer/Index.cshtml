@@ -5,10 +5,10 @@
   ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2>客戶管理</h2>
 
 <p>
-  @Html.ActionLink("Create New", "Create")
+  @Html.ActionLink("新增", "Create")
 </p>
 <table class="table">
   @{ var title = Model.Customers.FirstOrDefault();}
@@ -86,9 +86,9 @@
         @Html.DisplayFor(modelItem => item.Fax)
       </td>
       <td>
-        @Html.ActionLink("Edit", "Edit", new { CustomerID = item.CustomerID }) |
-        @Html.ActionLink("Details", "Details", new { CustomerID = item.CustomerID }) |
-        @Html.ActionLink("Delete", "Delete", new { CustomerID = item.CustomerID })
+        @Html.ActionLink("修改", "Edit", new { CustomerID = item.CustomerID }) |
+        @Html.ActionLink("詳情", "Details", new { CustomerID = item.CustomerID }) |
+        @Html.ActionLink("刪除", "Delete", new { CustomerID = item.CustomerID })
       </td>
     </tr>
   }

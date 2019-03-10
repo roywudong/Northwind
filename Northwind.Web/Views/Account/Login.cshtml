@@ -1,0 +1,46 @@
+﻿@model Northwind.Web.Models.LoginViewModel
+
+@{
+  ViewBag.Title = "Login";
+  Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section TopCSS{
+  <style>
+    .login-box {
+      padding: 20px;
+      width: 360px;
+      margin: 20px auto;
+    }
+
+    .login-box-body {
+      padding: 20px;
+      background-color: #ccc;
+    }
+  </style>
+
+}
+<div class="login-box">
+  <div class="login-box-heading">
+    <h3>Log In</h3>
+  </div>
+  <div class="login-box-body">
+    <p class="lead">請登入Northwind Demo</p>
+    @using (Html.BeginForm("", "", "", FormMethod.Post, new { @class = "form-element" }))
+    {
+      @Html.ValidationSummary()
+
+      <div class="form-group has-feedback">
+        @Html.TextBoxFor(m => m.UserName, new { @class = "form-control", placeholder = "帳號" })
+        <span class="ion ion-person form-control-feedback"></span>
+      </div>
+
+      <div class="form-group">
+        @Html.PasswordFor(m => m.Password, new { @class = "form-control ", placeholder = "密碼" })
+        <span class="ion ion-locked form-control-feedback"></span>
+      </div>
+      <input type="submit" value="登入" class="btn btn-primary" />
+    }
+    account: admin<br>
+    password: a123123
+  </div>
+</div>
