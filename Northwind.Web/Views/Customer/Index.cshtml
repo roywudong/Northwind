@@ -87,6 +87,7 @@
         @Html.DisplayFor(modelItem => item.Fax)
       </td>
       <td>
+        @Html.ActionLink("訂單查詢", "Index", "Order", new { CustomerID = item.CustomerID }, null)|
         @Html.ActionLink("修改", "Edit", new { CustomerID = item.CustomerID }) |
         @Html.ActionLink("詳情", "Details", new { CustomerID = item.CustomerID }) |
         @Html.ActionLink("刪除", "Delete", new { CustomerID = item.CustomerID })

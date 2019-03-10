@@ -19,6 +19,9 @@ namespace Northwind.Web.App_Start
 
         cfg.CreateMap<Suppliers, SupplierViewModel>();
         cfg.CreateMap<SupplierViewModel, Suppliers>();
+
+        cfg.CreateMap<Orders, OrderViewModel>();
+        cfg.CreateMap<OrderViewModel, Orders>();
       });
     }
   }

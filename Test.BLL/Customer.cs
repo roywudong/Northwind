@@ -1,17 +1,30 @@
 ﻿using System;
 using System.Linq;
+using AutoMapper;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Northwind.BLL.Abstract;
 using Northwind.BLL.Services;
+using Northwind.Domain;
+using Northwind.Domain.ViewModel;
 
 namespace Test.BLL
 {
   [TestClass]
   public class Customer
   {
+    public Customer()
+    {
+      Mapper.Initialize(cfg =>
+      {
+        cfg.CreateMap<Customers, CustomerViewModel>();
+        cfg.CreateMap<CustomerViewModel, Customers>();
+      });
+    }
+
     [TestMethod]
     public void GetTest()
     {
-      CustomerService customerService = new CustomerService();
+      ICustomerService customerService = new CustomerService();
       var data = customerService.Get();
       Assert.AreEqual(data.Count, 91);
     }
@@ -19,7 +32,7 @@ namespace Test.BLL
     [TestMethod]
     public void GetPageTest()
     {
-      CustomerService customerService = new CustomerService();
+      ICustomerService customerService = new CustomerService();
       int total = 0;
       var data = customerService.Get(2, 10, out total).ToList();
       Assert.AreEqual(total, 91);

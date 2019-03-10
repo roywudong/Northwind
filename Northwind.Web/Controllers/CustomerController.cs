@@ -13,17 +13,17 @@ namespace Northwind.Web.Controllers
   [Authorize]
   public class CustomerController : Controller
   {
-    private ICustomerService _service;
+    private ICustomerService customerService;
 
-    public CustomerController(ICustomerService service)
+    public CustomerController(ICustomerService customerservice)
     {
-      _service = service;
+      customerService = customerservice;
     }
 
     public ActionResult Index(int currPage = 1)
     {
       int pageSize = 5, iTotal = 0;
-      var data = _service.Get(currPage, pageSize, out iTotal).ToList();
+      var data = customerService.Get(currPage, pageSize, out iTotal).ToList();
       return View(new ListViewModel<CustomerViewModel>()
       {
         viewModel = data,
@@ -39,7 +39,7 @@ namespace Northwind.Web.Controllers
 
     public ActionResult Edit(string CustomerID)
     {
-      var data = _service.Get(CustomerID);
+      var data = customerService.Get(CustomerID);
       return View(data);
     }
 
@@ -50,7 +50,7 @@ namespace Northwind.Web.Controllers
       {
         if (ModelState.IsValid)
         {
-          _service.Save(customer);
+          customerService.Save(customer);
           TempData.Add("Message", "The customer was successfully added");
           return RedirectToAction("Index");
         }
@@ -76,7 +76,7 @@ namespace Northwind.Web.Controllers
       {
         if (ModelState.IsValid)
         {
-          _service.Add(customer);
+          customerService.Add(customer);
           TempData.Add("Message", "The customer was successfully added");
           return RedirectToAction("Index");
         }
@@ -94,7 +94,7 @@ namespace Northwind.Web.Controllers
     {
       try
       {
-        _service.Delete(CustomerID);
+        customerService.Delete(CustomerID);
         TempData.Add("Message", $"{CustomerID} has been delete");
         return RedirectToAction("Index");
       }
@@ -107,7 +107,7 @@ namespace Northwind.Web.Controllers
 
     public ActionResult Details(string CustomerID)
     {
-      var data = _service.Get(CustomerID);
+      var data = customerService.Get(CustomerID);
       return View(data);
     }
   }

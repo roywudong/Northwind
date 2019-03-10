@@ -19,8 +19,8 @@ namespace Northwind.BLL.Services
       var costomers = db.Get()
         .OrderBy(c => c.CustomerID)
         .Skip((CurrPage - 1) * PageSize)
-        .Take(PageSize).ToList();
-      return Mapper.Map<List<Customers>, List<CustomerViewModel>>(costomers).AsQueryable();
+        .Take(PageSize);
+      return Mapper.Map<IEnumerable<Customers>, List<CustomerViewModel>>(costomers).AsQueryable();
     }
 
     public CustomerViewModel Get(string CustomerID)

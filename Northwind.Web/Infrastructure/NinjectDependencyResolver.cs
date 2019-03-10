@@ -36,6 +36,7 @@ namespace Northwind.Web.Infrastructure
       kernel.Bind<IAuthProvider>().To<FormsAuthProvider>();
       kernel.Bind<ICustomerService>().To<CustomerService>();
       kernel.Bind<ISupplierService>().To<SupplierService>();
+      kernel.Bind<IOrderService>().To<OrderService>();
     }
   }
 }

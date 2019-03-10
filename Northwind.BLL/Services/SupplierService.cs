@@ -18,8 +18,8 @@ namespace Northwind.BLL.Services
       var suppliers = db.Get()
         .OrderBy(c => c.SupplierID)
         .Skip((CurrPage - 1) * PageSize)
-        .Take(PageSize).ToList();
-      return Mapper.Map<List<Suppliers>, List<SupplierViewModel>>(suppliers).AsQueryable();
+        .Take(PageSize);
+      return Mapper.Map<IEnumerable<Suppliers>, List<SupplierViewModel>>(suppliers).AsQueryable();
     }
 
     public SupplierViewModel Get(int SupplierID)
