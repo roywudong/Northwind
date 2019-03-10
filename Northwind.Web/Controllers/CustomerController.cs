@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using Northwind.BLL.Abstract;
 using Northwind.BLL.Services;
 using Northwind.Domain.ViewModel;
 using Northwind.Web.Models;
@@ -12,7 +13,7 @@ namespace Northwind.Web.Controllers
   [Authorize]
   public class CustomerController : Controller
   {
-    private CustomerService service = new CustomerService();
+    private ICustomerService service = new CustomerService();
 
     public ActionResult Index(int currPage = 1)
     {

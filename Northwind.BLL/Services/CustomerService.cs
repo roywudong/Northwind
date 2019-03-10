@@ -6,10 +6,11 @@ using Northwind.DAL.Interfaces;
 using Northwind.DAL.Repository;
 using Northwind.Domain.ViewModel;
 using AutoMapper;
+using Northwind.BLL.Abstract;
 
 namespace Northwind.BLL.Services
 {
-  public class CustomerService
+  public class CustomerService : ICustomerService
   {
     private IRepository<Customers> db;
 

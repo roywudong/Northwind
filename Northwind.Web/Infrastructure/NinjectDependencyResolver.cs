@@ -1,4 +1,6 @@
 ﻿using Ninject;
+using Northwind.BLL.Abstract;
+using Northwind.BLL.Services;
 using Northwind.Web.Infrastructure.Abstract;
 using Northwind.Web.Infrastructure.Concrete;
 using System;
@@ -32,6 +34,7 @@ namespace Northwind.Web.Infrastructure
     private void AddBindings()
     {
       kernel.Bind<IAuthProvider>().To<FormsAuthProvider>();
+      kernel.Bind<ICustomerService>().To<CustomerService>();
     }
   }
 }
