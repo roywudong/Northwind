@@ -10,8 +10,11 @@ namespace Northwind.Domain.MetaData
     [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
     public int SupplierID { get; set; }
   }
+}
 
-  [MetadataType(typeof(SuppliersMetadata))]
+namespace Northwind.Domain
+{
+  [MetadataType(typeof(MetaData.SuppliersMetadata))]
   public partial class Suppliers
   {
   }

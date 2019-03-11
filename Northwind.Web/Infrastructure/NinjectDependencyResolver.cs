@@ -37,6 +37,8 @@ namespace Northwind.Web.Infrastructure
       kernel.Bind<ICustomerService>().To<CustomerService>();
       kernel.Bind<ISupplierService>().To<SupplierService>();
       kernel.Bind<IOrderService>().To<OrderService>();
+      kernel.Bind<IEmployeeService>().To<EmployeeService>();
+      kernel.Bind<IShipperService>().To<ShipperService>();
     }
   }
 }

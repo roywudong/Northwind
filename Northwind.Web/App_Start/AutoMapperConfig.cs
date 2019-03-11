@@ -22,6 +22,9 @@ namespace Northwind.Web.App_Start
 
         cfg.CreateMap<Orders, OrderViewModel>();
         cfg.CreateMap<OrderViewModel, Orders>();
+
+        cfg.CreateMap<Employees, EmployeeViewModel>();
+        cfg.CreateMap<EmployeeViewModel, Employees>();
       });
     }
   }

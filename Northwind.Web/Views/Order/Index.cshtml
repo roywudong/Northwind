@@ -6,10 +6,10 @@
   ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2>@Model.FirstOrDefault().Customers.CompanyName 訂單管理</h2>
 
 <p>
-  @Html.ActionLink("Create New", "Create")
+  @Html.ActionLink("新增訂單", "Create", new { CustomerID = Model.FirstOrDefault().CustomerID })
 </p>
 <table class="table">
   <tr>
@@ -17,10 +17,7 @@
       @Html.DisplayNameFor(model => model.OrderID)
     </th>
     <th>
-      @Html.DisplayNameFor(model => model.CustomerID)
-    </th>
-    <th>
-      @Html.DisplayNameFor(model => model.EmployeeID)
+      @Html.DisplayNameFor(model => model.Employees.FullName)
     </th>
     <th>
       @Html.DisplayNameFor(model => model.OrderDate)
@@ -65,10 +62,7 @@
         @Html.DisplayFor(modelItem => item.OrderID)
       </td>
       <td>
-        @Html.DisplayFor(modelItem => item.CustomerID)
-      </td>
-      <td>
-        @Html.DisplayFor(modelItem => item.EmployeeID)
+        @Html.DisplayFor(modelItem => item.Employees.FullName)
       </td>
       <td>
         @Html.DisplayFor(modelItem => item.OrderDate)
@@ -104,9 +98,9 @@
         @Html.DisplayFor(modelItem => item.ShipCountry)
       </td>
       <td>
-        @Html.ActionLink("Edit", "Edit", new { OrderID = item.OrderID }) |
-        @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-        @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        @Html.ActionLink("Edit", "Edit", new { orderid = item.OrderID }) |
+        @Html.ActionLink("Details", "Details", new { orderid = item.OrderID }) |
+        @Html.ActionLink("Delete", "Delete", new { orderid = item.OrderID, customerid = item.CustomerID })
       </td>
     </tr>
   }

@@ -98,6 +98,7 @@
     <Compile Include="Employees.cs">
       <DependentUpon>NorthwindModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="MetaData\EmployeeMetadata.cs" />
     <Compile Include="MetaData\SuppliersMetadata.cs" />
     <Compile Include="NorthwindModel.Context.cs">
       <AutoGen>True</AutoGen>
@@ -137,7 +138,9 @@
       <DependentUpon>NorthwindModel.tt</DependentUpon>
     </Compile>
     <Compile Include="ViewModel\CustomerViewModel.cs" />
+    <Compile Include="ViewModel\EmployeeViewModel.cs" />
     <Compile Include="ViewModel\OrderViewModel.cs" />
+    <Compile Include="ViewModel\ShippersViewModel.cs" />
     <Compile Include="ViewModel\SupplierViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
